@@ -1,228 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess 960 Generator - Privacy Policy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy - FIDE Rating Calculator</title>
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --bg-color: #0D1B2A; /* Deep Navy */
+          --card-bg: #1B263B; /* Lighter Navy */
+          --text-color: #E0E1DD; /* Near White */
+          --text-muted: rgba(224, 225, 221, 0.6);
+          --highlight: #FDCB01; /* FIDE Gold/Yellow */
+          --border: rgba(253, 203, 1, 0.2);
+          --ivory: #F8FAFC;
+          --footer-bg: linear-gradient(135deg, #0D1B2A, #1B263B);
+        }
 
-<style>
+        html, body {
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            background: var(--bg-color);
+            background-image:
+                linear-gradient(45deg, rgba(65, 90, 119, 0.05) 25%, transparent 25%, transparent 75%, rgba(65, 90, 119, 0.05) 75%, rgba(65, 90, 119, 0.05)),
+                linear-gradient(45deg, rgba(65, 90, 119, 0.05) 25%, transparent 25%, transparent 75%, rgba(65, 90, 119, 0.05) 75%, rgba(65, 90, 119, 0.05));
+            background-position: 0 0, 40px 40px;
+            background-size: 80px 80px;
+            background-attachment: fixed;
+            -webkit-user-select: none;
+            user-select: none;
+        }
 
-body{
-font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-background:#0b0b0b;
-color:#f5f5f5;
-margin:0;
-padding:0;
-line-height:1.6;
-}
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
 
-.header{
-text-align:center;
-padding:40px 20px;
-background:linear-gradient(135deg,#000000,#1c1c1c);
-border-bottom:2px solid #D4AF37;
-}
+        .appShell {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-left: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            min-height: 100vh;
+            background: rgba(13, 27, 42, 0.95);
+            position: relative;
+            flex: 1;
+        }
 
-.header h1{
-margin:0;
-color:#D4AF37;
-font-size:32px;
-}
+        .mainContent {
+            flex: 1 0 auto;
+            padding: 24px 20px;
+        }
 
-.header p{
-color:#dddddd;
-}
+        header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 24px;
+            font-weight: 900;
+            margin: 0;
+            color: var(--highlight);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        header p { font-size: 12px; color: var(--text-muted); margin-top: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:30px 20px;
-}
+        .policy-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
 
-.card{
-background:#141414;
-border-radius:14px;
-padding:30px;
-margin-bottom:18px;
-border:1px solid rgba(212,175,55,0.25);
-box-shadow:0 8px 20px rgba(0,0,0,0.6);
-}
+        .policy-card h2 {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--highlight);
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
 
-.card h2{
-color:#D4AF37;
-margin-top:25px;
-border-bottom:1px solid rgba(212,175,55,0.3);
-padding-bottom:5px;
-}
+        .policy-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--ivory);
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        .policy-card ul { padding-left: 20px; margin-bottom: 15px; }
+        .policy-card li { font-size: 13px; color: var(--ivory); opacity: 0.8; margin-bottom: 6px; }
 
-.card h2:first-child{
-margin-top:0;
-}
+        .gold { color: var(--highlight); font-weight: 700; }
 
-.card ul{
-padding-left:20px;
-}
-
-.footer{
-text-align:center;
-padding:20px;
-background:linear-gradient(135deg,#000000,#1c1c1c);
-border-top:2px solid #D4AF37;
-margin-top:30px;
-}
-
-.footer span{
-color:#D4AF37;
-font-weight:bold;
-}
-
-.gold{
-color:#D4AF37;
-font-weight:bold;
-}
-
-</style>
+        /* Footer */
+        .coolFooter { flex-shrink: 0; padding: 20px 10px; background: var(--footer-bg); border-top: 2px solid var(--highlight); text-align: center; }
+        .footerBrand { font-weight: 800; color: var(--highlight); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+        .footerInfo { opacity: .7; font-size: 12px; color: #FFF; font-weight: 500; }
+    </style>
 </head>
-
 <body>
 
-<div class="header">
-<h1>Chess 960 Generator Privacy Policy</h1>
-<p>
-<span class="gold">Chess Lounge Series</span> • A 
-<span class="gold">The Lounge</span> Application
-</p>
-<p>Last Updated: July 20, 2026</p>
+<div class="appShell">
+    <div class="mainContent">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p>FIDE Rating Calculator • July 21, 2026</p>
+        </header>
+
+        <div class="policy-card">
+            <h2>Introduction</h2>
+            <p>
+                <strong>FIDE Rating Calculator</strong> is part of the <span class="gold">Chess Lounge Series</span> developed under <span class="gold">The Lounge</span>. This utility is designed to help chess players and arbiters perform FIDE-standard rating calculations privately and securely.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>Information Collection</h2>
+            <p>
+                FIDE Rating Calculator <strong>does not collect, store, transmit, or share</strong> any personal information from users.
+            </p>
+            <p>
+                The application operates anonymously. There is no user registration, login, or tracking of any kind. All data entered for calculations remains strictly within the application's temporary session on your device.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>Permissions</h2>
+            <p>
+                The application requests minimal permissions to function:
+            </p>
+            <ul>
+                <li><strong>Internet Access:</strong> Only required for displaying AdMob advertisements.</li>
+            </ul>
+            <p>
+                We do not access your camera, microphone, location, contacts, or personal files.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>Third-Party Services</h2>
+            <p>
+                This app uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use information about your device and ad interactions to provide relevant advertising. You can review Google's privacy policy for more details.
+            </p>
+        </div>
+
+        <div class="policy-card">
+            <h2>Contact</h2>
+            <p>
+                Developer: <span class="gold">Mythril_H3mL0cK</span>
+            </p>
+        </div>
+    </div>
+
+    <footer class="coolFooter">
+        <div class="footerBrand">FIDE Rating Calculator</div>
+        <div class="footerInfo">© Powered by The Lounge & Chess Lounge</div>
+    </footer>
 </div>
 
-
-<div class="container">
-
-<div class="card">
-
-<h2>Introduction</h2>
-
-<p>
-Chess 960 Generator is part of the <span class="gold">Chess Lounge Series</span>,
-a collection of chess applications developed under <span class="gold">The Lounge</span>.
-The application is a simple chess utility tool designed to generate random,
-valid Chess960 (Fischer Random Chess) starting positions.
-</p>
-
-<p>
-Chess 960 Generator helps chess players create unique starting positions for
-practice, analysis, and over-the-board games while maintaining a simple,
-private, and offline-first experience.
-</p>
-
-
-<h2>Information Collection</h2>
-
-<p>
-Chess 960 Generator does not collect, store, transmit, or share any personal
-information from users.
-</p>
-
-<p>
-The application does not require user registration, account creation, login,
-or any personal information input. All Chess960 positions are generated
-locally on your device.
-</p>
-
-
-<h2>Device Permissions</h2>
-
-<p>
-Chess 960 Generator does not request or access sensitive device features such as:
-</p>
-
-<ul>
-<li>Camera</li>
-<li>Microphone</li>
-<li>Location Services</li>
-<li>Contacts</li>
-<li>Photos or Media Files</li>
-<li>Personal File Storage</li>
-</ul>
-
-<p>
-The application does not capture images, record audio, collect location data,
-or access private user information. It only performs the necessary functions
-required to generate Chess960 positions.
-</p>
-
-
-<h2>Internet Usage</h2>
-
-<p>
-Chess 960 Generator is designed to operate completely offline.
-An internet connection is not required to generate Chess960 positions.
-</p>
-
-<p>
-The application does not transmit user activity, generated positions,
-device information, or any other personal data over the internet.
-</p>
-
-
-<h2>Third-Party Services</h2>
-
-<p>
-Chess 960 Generator does not use advertising networks, analytics platforms,
-tracking tools, or third-party services that collect user information.
-</p>
-
-
-<h2>Children's Privacy</h2>
-
-<p>
-Chess 960 Generator does not collect personal information and is suitable for
-users of all ages, including children.
-</p>
-
-
-<h2>Data Security</h2>
-
-<p>
-Since Chess 960 Generator does not collect or store personal data, there is
-no personal information retained by the application that could be accessed,
-shared, or compromised.
-</p>
-
-
-<h2>Changes to This Privacy Policy</h2>
-
-<p>
-This Privacy Policy may be updated from time to time to reflect improvements
-or changes to the application. Any updates will be posted on this page with
-a revised "Last Updated" date.
-</p>
-
-
-<h2>Contact Information</h2>
-
-<p>
-If you have any questions regarding this Privacy Policy, you may contact the
-developer.
-</p>
-
-<p>
-Developer: <span class="gold">Mythril_H3mL0cK</span>
-</p>
-
-</div>
-
-</div>
-
-
-<div class="footer">
-
-<span>♞ Chess 960 Generator</span><br>
-Part of the <span>Chess Lounge Series</span> by <span>The Lounge</span><br>
-© 2026 The Lounge. All Rights Reserved.
-
-</div>
-
-
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('copy', event => event.preventDefault());
+</script>
 </body>
 </html>
