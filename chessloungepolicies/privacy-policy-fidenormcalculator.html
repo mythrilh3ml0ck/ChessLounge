@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy - FIDE Norm Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --dark-bg: #121212;
+          --dark-surface: #1E1E1E;
+          --fide-red: #FF0000;
+          --text-white: #FFFFFF;
+          --text-grey: #BDBDBD;
+          --border-dark: #333333;
+        }
+
+        html, body {
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* Chess Background Pattern */
+        .chess-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.02;
+            background-image:
+                linear-gradient(45deg, #fff 25%, transparent 25%),
+                linear-gradient(-45deg, #fff 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #fff 75%),
+                linear-gradient(-45deg, transparent 75%, #fff 75%);
+            background-size: 60px 60px;
+            background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        header {
+            background-color: var(--dark-bg);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-dark);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header Chess Overlay */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.05;
+            z-index: 0;
+            background-image:
+                linear-gradient(45deg, #fff 25%, transparent 25%),
+                linear-gradient(-45deg, #fff 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #fff 75%),
+                linear-gradient(-45deg, transparent 75%, #fff 75%);
+            background-size: 60px 60px;
+            background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 18px;
+            font-weight: 800;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header .subtitle {
+            font-size: 12px;
+            color: var(--text-grey);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background-color: var(--dark-surface);
+            border: 1px solid var(--border-dark);
+            border-radius: 2px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--fide-red);
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--text-grey);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-grey);
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .red-text {
+            color: var(--fide-red);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            border-top: 1px solid var(--border-dark);
+            margin-top: 24px;
+        }
+
+        footer .brand {
+            font-size: 12px;
+            color: var(--text-grey);
+            font-weight: 600;
+        }
+
+        footer .copyright {
+            font-size: 11px;
+            color: #666666;
+            margin-top: 4px;
+        }
+
+        a {
+            color: var(--fide-red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chess-bg"></div>
+
+<header>
+    <h1>Privacy Policy</h1>
+    <div class="subtitle">FIDE Norm Calculator • August 19, 2026</div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Introduction</h2>
+        <p>
+            <span class="red-text">FIDE Norm Calculator</span> is part of the <span class="red-text">Chess Lounge Series</span> developed under <span class="red-text">The Lounge</span>. This application is a professional utility designed to help chess players, coaches, and arbiters calculate and validate title norms (GM, IM, WGM, WIM) according to the FIDE Handbook regulations.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Information Collection & Usage</h2>
+        <p>
+            <strong>Personal Data:</strong> The application does not collect, store, transmit, or share any personally identifiable information (PII). There is no user registration or login system.
+        </p>
+        <p>
+            <strong>Calculation Data:</strong> Any data you enter—such as player names, ratings, and tournament results—is stored <span class="red-text">locally on your device</span> in a private database. This allows you to view your calculation history offline. This data is never uploaded to any servers and is accessible only to you through the application.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Permissions</h2>
+        <p>
+            The application requests specific permissions to provide its features:
+        </p>
+        <ul>
+            <li><strong>Internet Access:</strong> Used exclusively for displaying advertisements via Google AdMob and accessing the online FIDE Handbook.</li>
+            <li><strong>Network State:</strong> Used to check for connectivity to load external resources.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Third-Party Services</h2>
+        <p>
+            This app uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect device-specific information (such as your device ID) and usage data to serve relevant ads. This data collection is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Disclaimer</h2>
+        <p>
+            This application is a validation tool and does not officially award FIDE titles or norms. All results should be verified with official FIDE regulations and national federations.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>
+            Developer: <span class="red-text">Mythril_H3mL0cK</span>
+        </p>
+    </div>
+
+    <footer>
+        <div class="brand">FIDE NORM CALCULATOR</div>
+        <div class="copyright">All Rights Reserved<br>Powered by The Lounge under Chess Lounge Series</div>
+    </footer>
+</div>
+
+</body>
+</html>
